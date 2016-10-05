@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="routes">
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body ng-controller="mainCtrl">
+
+    <ul>
+      <li ui-sref="home">Home</li>
+      <li ui-sref="aboutMe">About Me</li>
+      <li style="z-index: 99">
+        <span ui-sref="contact">Contact</span>
+        <ul style="z-index: 100">
+          <li ui-sref="contact.email">Email</li>
+          <li ui-sref="contact.text">Text</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- VIEW -->
+    <ui-view></ui-view>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./app/ctrls/mainCtrl.js"></script>
+    <script src="./app/routes/home/homeCtrl.js"></script>
+    <script src="./app/routes/aboutMe/aboutMeCtrl.js"></script>
+    <script src="./app/routes/contact/contactCtrl.js"></script>
+    <script src="./app/routes/email/emailCtrl.js"></script>
+    <script src="./app/routes/text/textCtrl.js"></script>
+  </body>
+
+</html>
